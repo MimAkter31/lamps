@@ -203,15 +203,25 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 7px 10px;
+      width: 32px;
+      height: 32px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 999px;
       color: var(--muted);
-      font: 11px/1 var(--mono);
-      letter-spacing: 0.08em;
-      text-transform: lowercase;
       text-decoration: none;
       transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-link svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    .social-link.website svg {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
     }
 
     .social-link:hover,
@@ -440,8 +450,8 @@
       }
 
       .social-link {
-        font-size: 10px;
-        padding: 6px 8px;
+        width: 30px;
+        height: 30px;
       }
 
       .switch {
@@ -529,10 +539,27 @@
   <div class="hud">
     <div class="tl">slingshot-lamp · <b id="state">on</b><br>shots <b id="shots">0</b> · bulbs <b id="bulbs">0</b></div>
     <div class="socials" aria-label="Social links">
-      <a class="social-link" href="https://github.com/mimakter31" target="_blank" rel="noopener noreferrer">github</a>
-      <a class="social-link" href="https://www.linkedin.com/in/mimakter31" target="_blank"
-        rel="noopener noreferrer">linkedin</a>
-      <a class="social-link" href="https://mimakter.tech/" target="_blank" rel="noopener noreferrer">website</a>
+      <a class="social-link" href="https://github.com/mimakter31" target="_blank" rel="noopener noreferrer"
+        aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2.5a9.5 9.5 0 0 0-3 18.51c.48.09.65-.21.65-.46v-1.69c-2.65.58-3.21-1.12-3.21-1.12-.44-1.11-1.08-1.41-1.08-1.41-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.87 1.5 2.28 1.07 2.84.82.09-.63.34-1.07.62-1.32-2.12-.24-4.35-1.06-4.35-4.72 0-1.04.37-1.89.98-2.56-.1-.24-.43-1.21.09-2.52 0 0 .8-.26 2.62.98a9.1 9.1 0 0 1 4.77 0c1.82-1.24 2.62-.98 2.62-.98.52 1.31.19 2.28.09 2.52.61.67.98 1.52.98 2.56 0 3.67-2.23 4.48-4.36 4.72.35.3.66.89.66 1.8v2.67c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5Z" />
+        </svg>
+      </a>
+      <a class="social-link" href="https://www.linkedin.com/in/mimakter31" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn" title="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.5 8.25H3.25V20.5H6.5V8.25ZM4.88 3.5a1.88 1.88 0 1 0 0 3.75 1.88 1.88 0 0 0 0-3.75ZM20.75 13.48c0-3.69-1.97-5.41-4.6-5.41-2.11 0-3.05 1.16-3.58 1.98V8.25H9.32V20.5h3.25v-6.07c0-1.6.3-3.15 2.29-3.15 1.96 0 1.98 1.83 1.98 3.25v5.97h3.25l.66-7.02Z" />
+        </svg>
+      </a>
+      <a class="social-link website" href="https://mimakter.tech/" target="_blank" rel="noopener noreferrer"
+        aria-label="Website" title="Website">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3.5 12h17M12 3c2.1 2.4 3.1 5.4 3.1 9s-1 6.6-3.1 9c-2.1-2.4-3.1-5.4-3.1-9S9.9 5.4 12 3Z" />
+        </svg>
+      </a>
     </div>
     <button id="sound" class="tr">sound: on</button>
     <div id="switch" class="switch" role="switch" aria-checked="true" aria-label="Light switch" tabindex="0">
